@@ -165,3 +165,5 @@ data/
 ROM/
 
 resource_credentials.py
+
+mlruns/
