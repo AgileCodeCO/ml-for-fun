@@ -1,2 +1,2 @@
-# ml-for-fun
-Machine and deep learning code for fun
+# AI/ML for fun
+Machine and deep learning code for experimentation and fun
