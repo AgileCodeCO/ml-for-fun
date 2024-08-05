@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, OrdinalEncoder
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import roc_auc_score
 
 def parse_args():
     
@@ -40,27 +43,43 @@ def main(args):
     X_train = train_df.drop('Response', axis=1)
     y_train = train_df['Response']
     
+    # Split the data for validation
+    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
+    
     # Train using logistic regression
-    print("Traning model...")
     model = train_logistic_regression_model(X_train, y_train)
+    evaluate_model(model, X_test, y_test)
     
-    # Calculate accuracy
-    X_test = test_df.drop('Response', axis=1)
-    y_test = test_df['Response']
+    # Train using SVM
+    model = train_svm_model(X_train, y_train)
+    evaluate_model(model, X_test, y_test)
     
-    print("Evaluating model...")
+def train_logistic_regression_model(X_train, y_train):
+    print("Traning LogisticRegression model...")
+    model = LogisticRegression(solver='liblinear')
+    model.fit(X_train, y_train)
+    return model
+
+def train_svm_model(X_train, y_train):
+    print("Traning SVC model...")
+    model = SVC()
+    model.fit(X_train, y_train)
+    return model
+
+def evaluate_model(model, X_test, y_test):
+    print(f"Evaluating {type(model).__class__.__name__} model...")
     
     predictions = model.predict(X_test)
     accuracy = np.average(y_test == predictions)
     print("Accuracy:", accuracy)
     
+    y_scores = model.predict_proba(X_test)
+    auc = roc_auc_score(y_test, y_scores[:,1])
+    print("AUC:", auc)
     
-def train_logistic_regression_model(X_train, y_train):
-    # Train a logistic regression model
-    model = LogisticRegression(solver='liblinear')
-    model.fit(X_train, y_train)
-    return model
-    
+    print("*" * 30)
+    print("\n")
+
 def read_data(data_path):
     # Read data
     data = pd.read_csv(data_path, index_col=0)
