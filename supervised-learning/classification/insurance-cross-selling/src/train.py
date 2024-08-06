@@ -55,14 +55,15 @@ def main(args):
     evaluate_model(model, X_test, y_test)
     
 def train_logistic_regression_model(X_train, y_train):
+    print("\n")
     print("Traning LogisticRegression model...")
-    model = LogisticRegression(solver='liblinear')
+    model = LogisticRegression(solver='liblinear', random_state=42)
     model.fit(X_train, y_train)
     return model
 
 def train_svm_model(X_train, y_train):
     print("Traning SVC model...")
-    model = SVC()
+    model = SVC(kernel='rbf', gamma='scale', C=1, max_iter=300, probability=true, random_state=42)
     model.fit(X_train, y_train)
     return model
 
@@ -76,9 +77,7 @@ def evaluate_model(model, X_test, y_test):
     y_scores = model.predict_proba(X_test)
     auc = roc_auc_score(y_test, y_scores[:,1])
     print("AUC:", auc)
-    
     print("*" * 30)
-    print("\n")
 
 def read_data(data_path):
     # Read data
