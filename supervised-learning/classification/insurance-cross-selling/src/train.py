@@ -1,10 +1,13 @@
 # Import libraries
 import argparse
+import mlflow
+import datetime
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, OrdinalEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
 
@@ -19,6 +22,10 @@ def parse_args():
     return args
 
 def main(args):
+    
+    mlflow.set_experiment("Insurance-CrossSell-Prediction")
+    mlflow.sklearn.autolog(silent=True)
+    
     print("Reading data...")
     train_df = read_data(args.train_data)
     test_df = read_data(args.test_data)
@@ -47,37 +54,61 @@ def main(args):
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
     
     # Train using logistic regression
-    model = train_logistic_regression_model(X_train, y_train)
-    evaluate_model(model, X_test, y_test)
+    regularization_rate = 0.1
+    with mlflow.start_run(run_name=get_friendly_run_id("LogisticRegression")):
+        model = train_logistic_regression_model(X_train, y_train, regularization_rate)
+        evaluate_model(model, X_test, y_test)
     
     # Train using SVM
-    model = train_svm_model(X_train, y_train)
-    evaluate_model(model, X_test, y_test)
+    regularization_rate = 0.1
+    with mlflow.start_run(run_name=get_friendly_run_id("SVC")):
+        model = train_svm_model(X_train, y_train, regularization_rate)
+        evaluate_model(model, X_test, y_test)
     
-def train_logistic_regression_model(X_train, y_train):
-    print("\n")
+    # Train using Random Forest
+    n_estimators = 50
+    with mlflow.start_run(run_name=get_friendly_run_id("RandomForestClassifier")):
+        model = train_random_forest_model(X_train, y_train, n_estimators)
+        evaluate_model(model, X_test, y_test)
+    
+def train_logistic_regression_model(X_train, y_train, reg_rate):
     print("Traning LogisticRegression model...")
-    model = LogisticRegression(solver='liblinear', random_state=42)
+    model = LogisticRegression(solver='liblinear', C=1/reg_rate, random_state=42)
     model.fit(X_train, y_train)
     return model
 
-def train_svm_model(X_train, y_train):
+def train_svm_model(X_train, y_train, reg_rate):
     print("Traning SVC model...")
-    model = SVC(kernel='rbf', gamma='scale', C=1, max_iter=300, probability=true, random_state=42)
+    model = SVC(kernel='rbf', gamma='scale', C=1/reg_rate, max_iter=100, probability=True, random_state=42)
+    model.fit(X_train, y_train)
+    return model
+
+def train_random_forest_model(X_train, y_train, n_estimators):
+    print("Traning RandomForestClassifier model...")
+    model = RandomForestClassifier(n_estimators=n_estimators, random_state=42)
     model.fit(X_train, y_train)
     return model
 
 def evaluate_model(model, X_test, y_test):
-    print(f"Evaluating {type(model).__class__.__name__} model...")
+    print(f"Evaluating model...")
     
     predictions = model.predict(X_test)
     accuracy = np.average(y_test == predictions)
     print("Accuracy:", accuracy)
+    mlflow.log_metric("evaluation_accuracy_score", accuracy)
     
     y_scores = model.predict_proba(X_test)
     auc = roc_auc_score(y_test, y_scores[:,1])
     print("AUC:", auc)
+    mlflow.log_metric("evaluation_roc_auc_score", auc)
     print("*" * 30)
+    
+def get_friendly_run_id(model_name = None):
+    now = datetime.datetime.now()
+    if(model_name):
+        return now.strftime(f"%Y_%m_%d_%H_%M_%S-{model_name}")
+    
+    return now.strftime("%Y_%m_%d_%H_%M_%S")
 
 def read_data(data_path):
     # Read data
