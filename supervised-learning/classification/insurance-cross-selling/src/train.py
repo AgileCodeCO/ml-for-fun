@@ -54,19 +54,19 @@ def main(args):
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
     
     # Train using logistic regression
-    regularization_rate = 0.1
+    regularization_rate = 0.01
     with mlflow.start_run(run_name=get_friendly_run_id("LogisticRegression")):
         model = train_logistic_regression_model(X_train, y_train, regularization_rate)
         evaluate_model(model, X_test, y_test)
     
     # Train using SVM
-    regularization_rate = 0.1
+    regularization_rate = 0.01
     with mlflow.start_run(run_name=get_friendly_run_id("SVC")):
         model = train_svm_model(X_train, y_train, regularization_rate)
         evaluate_model(model, X_test, y_test)
     
     # Train using Random Forest
-    n_estimators = 50
+    n_estimators = 100
     with mlflow.start_run(run_name=get_friendly_run_id("RandomForestClassifier")):
         model = train_random_forest_model(X_train, y_train, n_estimators)
         evaluate_model(model, X_test, y_test)
