@@ -54,38 +54,29 @@ def main(args):
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
     
     # Train using logistic regression
-    regularization_rate = 0.01
-    with mlflow.start_run(run_name=get_friendly_run_id("LogisticRegression")):
-        model = train_logistic_regression_model(X_train, y_train, regularization_rate)
-        evaluate_model(model, X_test, y_test)
-    
-    # Train using SVM
-    regularization_rate = 0.01
-    with mlflow.start_run(run_name=get_friendly_run_id("SVC")):
-        model = train_svm_model(X_train, y_train, regularization_rate)
+    regularization_rate = 0.1
+    solver = 'liblinear'
+    with mlflow.start_run(run_name=get_friendly_run_id("LogisticRegression_sag")):
+        model = train_logistic_regression_model(X_train, y_train, regularization_rate, solver)
         evaluate_model(model, X_test, y_test)
     
     # Train using Random Forest
     n_estimators = 100
+    criterion = 'gini'
     with mlflow.start_run(run_name=get_friendly_run_id("RandomForestClassifier")):
-        model = train_random_forest_model(X_train, y_train, n_estimators)
+        model = train_random_forest_model(X_train, y_train, n_estimators, criterion)
         evaluate_model(model, X_test, y_test)
+        
     
-def train_logistic_regression_model(X_train, y_train, reg_rate):
+def train_logistic_regression_model(X_train, y_train, reg_rate, solver):
     print("Traning LogisticRegression model...")
-    model = LogisticRegression(solver='liblinear', C=1/reg_rate, random_state=42)
+    model = LogisticRegression(solver=solver, C=1/reg_rate, random_state=42)
     model.fit(X_train, y_train)
     return model
 
-def train_svm_model(X_train, y_train, reg_rate):
-    print("Traning SVC model...")
-    model = SVC(kernel='rbf', gamma='scale', C=1/reg_rate, max_iter=100, probability=True, random_state=42)
-    model.fit(X_train, y_train)
-    return model
-
-def train_random_forest_model(X_train, y_train, n_estimators):
+def train_random_forest_model(X_train, y_train, n_estimators, criterion):
     print("Traning RandomForestClassifier model...")
-    model = RandomForestClassifier(n_estimators=n_estimators, random_state=42)
+    model = RandomForestClassifier(n_estimators=n_estimators, random_state=42, criterion=criterion)
     model.fit(X_train, y_train)
     return model
 
