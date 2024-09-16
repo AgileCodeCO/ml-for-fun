@@ -4,12 +4,13 @@ import mlflow
 import datetime
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler, OrdinalEncoder
+from sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
+from tensorflow.keras import layers, models, optimizers, metrics
 
 def parse_args():
     
@@ -25,6 +26,7 @@ def main(args):
     
     mlflow.set_experiment("Insurance-CrossSell-Prediction")
     mlflow.sklearn.autolog(silent=True)
+    mlflow.keras.autolog(silent=True)
     
     print("Reading data...")
     train_df = read_data(args.train_data)
@@ -54,18 +56,26 @@ def main(args):
     X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
     
     # Train using logistic regression
-    regularization_rate = 0.1
-    solver = 'liblinear'
-    with mlflow.start_run(run_name=get_friendly_run_id("LogisticRegression_sag")):
-        model = train_logistic_regression_model(X_train, y_train, regularization_rate, solver)
-        evaluate_model(model, X_test, y_test)
+    # regularization_rate = 0.1
+    # solver = 'liblinear'
+    # with mlflow.start_run(run_name=get_friendly_run_id("LogisticRegression_sag")):
+    #     model = train_logistic_regression_model(X_train, y_train, regularization_rate, solver)
+    #     evaluate_model(model, X_test, y_test)
     
     # Train using Random Forest
-    n_estimators = 100
-    criterion = 'gini'
-    with mlflow.start_run(run_name=get_friendly_run_id("RandomForestClassifier")):
-        model = train_random_forest_model(X_train, y_train, n_estimators, criterion)
-        evaluate_model(model, X_test, y_test)
+    # n_estimators = 100
+    # criterion = 'gini'
+    # with mlflow.start_run(run_name=get_friendly_run_id("RandomForestClassifier")):
+    #     model = train_random_forest_model(X_train, y_train, n_estimators, criterion)
+    #     evaluate_model(model, X_test, y_test)
+        
+    # Train using Neural Network
+    input_shape = X_train.shape[1]
+    epochs = 10
+    batch_size = 64
+    with mlflow.start_run(run_name=get_friendly_run_id("NeuralNetwork")):
+        model = train_neural_network_model(X_train, y_train, input_shape, epochs, batch_size)
+        evaluate_neural_network(model, X_test, y_test)
         
     
 def train_logistic_regression_model(X_train, y_train, reg_rate, solver):
@@ -80,6 +90,21 @@ def train_random_forest_model(X_train, y_train, n_estimators, criterion):
     model.fit(X_train, y_train)
     return model
 
+def train_neural_network_model(X_train, y_train, input_shape, epochs, batch_size):
+    print("Traning NeuralNetwork model...")
+    print("Input shape:", input_shape)
+    
+    model = models.Sequential()
+    model.add(layers.Dense(256, activation='relu', input_shape=(input_shape,)))
+    model.add(layers.BatchNormalization())
+    model.add(layers.Dense(256, activation='relu'))
+    model.add(layers.Dense(1, activation='sigmoid'))
+    
+    model.compile(optimizer=optimizers.Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=[metrics.BinaryAccuracy(name="training_accuracy_score"), metrics.AUC(name="training_roc_auc")])
+    model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size)
+    
+    return model
+
 def evaluate_model(model, X_test, y_test):
     print(f"Evaluating model...")
     
@@ -92,6 +117,19 @@ def evaluate_model(model, X_test, y_test):
     auc = roc_auc_score(y_test, y_scores[:,1])
     print("AUC:", auc)
     mlflow.log_metric("evaluation_roc_auc_score", auc)
+    print("*" * 30)
+    
+def evaluate_neural_network(model, X_test, y_test):
+    print(f"Evaluating model...")
+    
+    score = model.evaluate(X_test, y_test)
+    print(score)
+    
+    print("Accuracy:", score[1])
+    mlflow.log_metric("evaluation_accuracy_score", score[1])
+    
+    print("AUC:", score[2])
+    mlflow.log_metric("evaluation_roc_auc_score", score[2])
     print("*" * 30)
     
 def get_friendly_run_id(model_name = None):
