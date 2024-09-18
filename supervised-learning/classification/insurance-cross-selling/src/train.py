@@ -8,7 +8,7 @@ from sklearn.preprocessing import MinMaxScaler, OrdinalEncoder, StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score, KFold
 from sklearn.metrics import roc_auc_score
 from tensorflow.keras import layers, models, optimizers, metrics
 
@@ -33,7 +33,7 @@ def main(args):
     test_df = read_data(args.test_data)
     
     categorical_columns = ["Gender", "Vehicle_Age", "Vehicle_Damage"]
-    numerical_columns = ["Age", "Annual_Premium"]
+    numerical_columns = ["Age", "Annual_Premium","Policy_Sales_Channel", "Vintage", "Region_Code"]
     
     print("Preprocessing data and applying encoding to categorical columns...")
 
@@ -45,16 +45,19 @@ def main(args):
     
     # Normalize the data
     for col in numerical_columns:
-        scaler = MinMaxScaler()
+        scaler = StandardScaler()
         train_df[col] = scaler.fit_transform(train_df[col].values.reshape(-1,1))
         test_df[col] = scaler.transform(test_df[col].values.reshape(-1,1))
+        
+    # Save test data after preprocessing
+    test_df.to_csv("data/test_preprocessed.csv")
     
     X_train = train_df.drop('Response', axis=1)
     y_train = train_df['Response']
     
     # Split the data for validation
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
-    
+    #X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.7, random_state=42)
+
     # Train using logistic regression
     # regularization_rate = 0.1
     # solver = 'liblinear'
@@ -70,12 +73,32 @@ def main(args):
     #     evaluate_model(model, X_test, y_test)
         
     # Train using Neural Network
-    input_shape = X_train.shape[1]
-    epochs = 10
-    batch_size = 64
-    with mlflow.start_run(run_name=get_friendly_run_id("NeuralNetwork")):
-        model = train_neural_network_model(X_train, y_train, input_shape, epochs, batch_size)
-        evaluate_neural_network(model, X_test, y_test)
+    # Define the K-fold Cross Validator
+    num_folds = 5
+    kfold = KFold(n_splits=num_folds, shuffle=True)
+    fold_no = 1
+    
+    for train, test in kfold.split(X_train, y_train):
+        X_train_kf, X_test_kf = X_train.iloc[train], X_train.iloc[test]
+        y_train_kf, y_test_kf = y_train.iloc[train], y_train.iloc[test]
+        
+        input_shape = X_train_kf.shape[1]
+        epochs = 10
+        batch_size = 64
+        print(f"Training fold {fold_no}...")
+        with mlflow.start_run(run_name=get_friendly_run_id(f"NeuralNetwork_Fold_{fold_no}")):
+            model = train_neural_network_model(X_train_kf, y_train_kf, input_shape, epochs, batch_size)
+            evaluate_neural_network(model, X_test_kf, y_test_kf) 
+    
+        fold_no = fold_no + 1
+    
+    # Train using Neural Network
+    # input_shape = X_train.shape[1]
+    # epochs = 10
+    # batch_size = 64
+    # with mlflow.start_run(run_name=get_friendly_run_id("NeuralNetwork")):
+    #     model = train_neural_network_model(X_train, y_train, input_shape, epochs, batch_size)
+    #     evaluate_neural_network(model, X_test, y_test)
         
     
 def train_logistic_regression_model(X_train, y_train, reg_rate, solver):
@@ -97,10 +120,13 @@ def train_neural_network_model(X_train, y_train, input_shape, epochs, batch_size
     model = models.Sequential()
     model.add(layers.Dense(256, activation='relu', input_shape=(input_shape,)))
     model.add(layers.BatchNormalization())
+    model.add(layers.Dropout(0.2))
     model.add(layers.Dense(256, activation='relu'))
     model.add(layers.Dense(1, activation='sigmoid'))
     
-    model.compile(optimizer=optimizers.Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=[metrics.BinaryAccuracy(name="training_accuracy_score"), metrics.AUC(name="training_roc_auc")])
+    model.compile(optimizer=optimizers.Adam(learning_rate=0.0001), 
+                  loss='binary_crossentropy', 
+                  metrics=[metrics.BinaryAccuracy(name="training_accuracy_score"), metrics.AUC(name="training_roc_auc"), metrics.Precision(name="training_precision"), metrics.Recall(name="training_recall"), metrics.F1Score(name="training_f1_score")])
     model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size)
     
     return model
