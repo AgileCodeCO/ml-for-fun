@@ -32,6 +32,9 @@ def main(args):
     train_df = read_data(args.train_data)
     test_df = read_data(args.test_data)
     
+    # Count the number of row grouped by the target variable Response
+    print(train_df.groupby('Response').size())
+    
     categorical_columns = ["Gender", "Vehicle_Age", "Vehicle_Damage"]
     numerical_columns = ["Age", "Annual_Premium","Policy_Sales_Channel", "Vintage", "Region_Code"]
     
@@ -78,19 +81,19 @@ def main(args):
     kfold = KFold(n_splits=num_folds, shuffle=True)
     fold_no = 1
     
-    for train, test in kfold.split(X_train, y_train):
-        X_train_kf, X_test_kf = X_train.iloc[train], X_train.iloc[test]
-        y_train_kf, y_test_kf = y_train.iloc[train], y_train.iloc[test]
+    # for train, test in kfold.split(X_train, y_train):
+    #     X_train_kf, X_test_kf = X_train.iloc[train], X_train.iloc[test]
+    #     y_train_kf, y_test_kf = y_train.iloc[train], y_train.iloc[test]
         
-        input_shape = X_train_kf.shape[1]
-        epochs = 10
-        batch_size = 64
-        print(f"Training fold {fold_no}...")
-        with mlflow.start_run(run_name=get_friendly_run_id(f"NeuralNetwork_Fold_{fold_no}")):
-            model = train_neural_network_model(X_train_kf, y_train_kf, input_shape, epochs, batch_size)
-            evaluate_neural_network(model, X_test_kf, y_test_kf) 
+    #     input_shape = X_train_kf.shape[1]
+    #     epochs = 10
+    #     batch_size = 64
+    #     print(f"Training fold {fold_no}...")
+    #     with mlflow.start_run(run_name=get_friendly_run_id(f"NeuralNetwork_Fold_{fold_no}")):
+    #         model = train_neural_network_model(X_train_kf, y_train_kf, input_shape, epochs, batch_size)
+    #         evaluate_neural_network(model, X_test_kf, y_test_kf) 
     
-        fold_no = fold_no + 1
+    #     fold_no = fold_no + 1
     
     # Train using Neural Network
     # input_shape = X_train.shape[1]
