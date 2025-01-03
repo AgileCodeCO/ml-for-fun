@@ -1,0 +1,321 @@
+season,conf,division,team,wins,losses,ties,pct,div_rank,scored,allowed,net,seed,playoff,team_name
+2014,AFC,AFC East,BUF,9,7,0,0.5625,2,343,289,54,,,Buffalo Bills
+2014,AFC,AFC East,MIA,8,8,0,0.5,3,388,373,15,,,Miami Dolphins
+2014,AFC,AFC East,NE,12,4,0,0.75,1,468,313,155,1.0,WonSB,New England Patriots
+2014,AFC,AFC East,NYJ,4,12,0,0.25,4,283,401,-118,,,New York Jets
+2014,AFC,AFC North,BAL,10,6,0,0.625,3,409,302,107,6.0,LostDV,Baltimore Ravens
+2014,AFC,AFC North,CIN,10,5,1,0.65625,2,365,344,21,5.0,LostWC,Cincinnati Bengals
+2014,AFC,AFC North,CLE,7,9,0,0.4375,4,299,337,-38,,,Cleveland Browns
+2014,AFC,AFC North,PIT,11,5,0,0.6875,1,436,368,68,3.0,LostWC,Pittsburgh Steelers
+2014,AFC,AFC South,HOU,9,7,0,0.5625,2,372,307,65,,,Houston Texans
+2014,AFC,AFC South,IND,11,5,0,0.6875,1,458,369,89,4.0,LostCC,Indianapolis Colts
+2014,AFC,AFC South,JAX,3,13,0,0.1875,3,249,412,-163,,,Jacksonville Jaguars
+2014,AFC,AFC South,TEN,2,14,0,0.125,4,254,438,-184,,,Tennessee Titans
+2014,AFC,AFC West,DEN,12,4,0,0.75,1,482,354,128,2.0,LostDV,Denver Broncos
+2014,AFC,AFC West,KC,9,7,0,0.5625,2,353,281,72,,,Kansas City Chiefs
+2014,AFC,AFC West,LV,3,13,0,0.1875,4,253,452,-199,,,Las Vegas Raiders
+2014,AFC,AFC West,LAC,9,7,0,0.5625,3,348,348,0,,,Los Angeles Chargers
+2014,NFC,NFC East,DAL,12,4,0,0.75,1,467,352,115,3.0,LostDV,Dallas Cowboys
+2014,NFC,NFC East,NYG,6,10,0,0.375,3,380,400,-20,,,New York Giants
+2014,NFC,NFC East,PHI,10,6,0,0.625,2,474,400,74,,,Philadelphia Eagles
+2014,NFC,NFC East,WAS,4,12,0,0.25,4,301,438,-137,,,Washington Commanders
+2014,NFC,NFC North,CHI,5,11,0,0.3125,4,319,442,-123,,,Chicago Bears
+2014,NFC,NFC North,DET,11,5,0,0.6875,2,321,282,39,6.0,LostWC,Detroit Lions
+2014,NFC,NFC North,GB,12,4,0,0.75,1,486,348,138,2.0,LostCC,Green Bay Packers
+2014,NFC,NFC North,MIN,7,9,0,0.4375,3,325,343,-18,,,Minnesota Vikings
+2014,NFC,NFC South,ATL,6,10,0,0.375,3,381,417,-36,,,Atlanta Falcons
+2014,NFC,NFC South,CAR,7,8,1,0.46875,1,339,374,-35,4.0,LostDV,Carolina Panthers
+2014,NFC,NFC South,NO,7,9,0,0.4375,2,401,424,-23,,,New Orleans Saints
+2014,NFC,NFC South,TB,2,14,0,0.125,4,277,410,-133,,,Tampa Bay Buccaneers
+2014,NFC,NFC West,ARI,11,5,0,0.6875,2,310,299,11,5.0,LostWC,Arizona Cardinals
+2014,NFC,NFC West,SEA,12,4,0,0.75,1,394,254,140,1.0,LostSB,Seattle Seahawks
+2014,NFC,NFC West,SF,8,8,0,0.5,3,306,340,-34,,,San Francisco 49ers
+2014,NFC,NFC West,LA,6,10,0,0.375,4,324,354,-30,,,Los Angeles Rams
+2015,AFC,AFC East,BUF,8,8,0,0.5,3,379,359,20,,,Buffalo Bills
+2015,AFC,AFC East,MIA,6,10,0,0.375,4,310,389,-79,,,Miami Dolphins
+2015,AFC,AFC East,NE,12,4,0,0.75,1,465,315,150,2.0,LostCC,New England Patriots
+2015,AFC,AFC East,NYJ,10,6,0,0.625,2,387,314,73,,,New York Jets
+2015,AFC,AFC North,BAL,5,11,0,0.3125,3,328,401,-73,,,Baltimore Ravens
+2015,AFC,AFC North,CIN,12,4,0,0.75,1,419,279,140,3.0,LostWC,Cincinnati Bengals
+2015,AFC,AFC North,CLE,3,13,0,0.1875,4,278,432,-154,,,Cleveland Browns
+2015,AFC,AFC North,PIT,10,6,0,0.625,2,423,319,104,6.0,LostDV,Pittsburgh Steelers
+2015,AFC,AFC South,HOU,9,7,0,0.5625,1,339,313,26,4.0,LostWC,Houston Texans
+2015,AFC,AFC South,IND,8,8,0,0.5,2,333,408,-75,,,Indianapolis Colts
+2015,AFC,AFC South,JAX,5,11,0,0.3125,3,376,448,-72,,,Jacksonville Jaguars
+2015,AFC,AFC South,TEN,3,13,0,0.1875,4,299,423,-124,,,Tennessee Titans
+2015,AFC,AFC West,DEN,12,4,0,0.75,1,355,296,59,1.0,WonSB,Denver Broncos
+2015,AFC,AFC West,KC,11,5,0,0.6875,2,405,287,118,5.0,LostDV,Kansas City Chiefs
+2015,AFC,AFC West,LV,7,9,0,0.4375,3,359,399,-40,,,Las Vegas Raiders
+2015,AFC,AFC West,LAC,4,12,0,0.25,4,320,398,-78,,,Los Angeles Chargers
+2015,NFC,NFC East,DAL,4,12,0,0.25,4,275,374,-99,,,Dallas Cowboys
+2015,NFC,NFC East,NYG,6,10,0,0.375,3,420,442,-22,,,New York Giants
+2015,NFC,NFC East,PHI,7,9,0,0.4375,2,377,430,-53,,,Philadelphia Eagles
+2015,NFC,NFC East,WAS,9,7,0,0.5625,1,388,379,9,4.0,LostWC,Washington Commanders
+2015,NFC,NFC North,CHI,6,10,0,0.375,4,335,397,-62,,,Chicago Bears
+2015,NFC,NFC North,DET,7,9,0,0.4375,3,358,400,-42,,,Detroit Lions
+2015,NFC,NFC North,GB,10,6,0,0.625,2,368,323,45,5.0,LostDV,Green Bay Packers
+2015,NFC,NFC North,MIN,11,5,0,0.6875,1,365,302,63,3.0,LostWC,Minnesota Vikings
+2015,NFC,NFC South,ATL,8,8,0,0.5,2,339,345,-6,,,Atlanta Falcons
+2015,NFC,NFC South,CAR,15,1,0,0.9375,1,500,308,192,1.0,LostSB,Carolina Panthers
+2015,NFC,NFC South,NO,7,9,0,0.4375,3,408,476,-68,,,New Orleans Saints
+2015,NFC,NFC South,TB,6,10,0,0.375,4,342,417,-75,,,Tampa Bay Buccaneers
+2015,NFC,NFC West,ARI,13,3,0,0.8125,1,489,313,176,2.0,LostCC,Arizona Cardinals
+2015,NFC,NFC West,SEA,10,6,0,0.625,2,423,277,146,6.0,LostDV,Seattle Seahawks
+2015,NFC,NFC West,SF,5,11,0,0.3125,4,238,387,-149,,,San Francisco 49ers
+2015,NFC,NFC West,LA,7,9,0,0.4375,3,280,330,-50,,,Los Angeles Rams
+2016,AFC,AFC East,BUF,7,9,0,0.4375,3,399,378,21,,,Buffalo Bills
+2016,AFC,AFC East,MIA,10,6,0,0.625,2,363,380,-17,6.0,LostWC,Miami Dolphins
+2016,AFC,AFC East,NE,14,2,0,0.875,1,441,250,191,1.0,WonSB,New England Patriots
+2016,AFC,AFC East,NYJ,5,11,0,0.3125,4,275,409,-134,,,New York Jets
+2016,AFC,AFC North,BAL,8,8,0,0.5,2,343,321,22,,,Baltimore Ravens
+2016,AFC,AFC North,CIN,6,9,1,0.40625,3,325,315,10,,,Cincinnati Bengals
+2016,AFC,AFC North,CLE,1,15,0,0.0625,4,264,452,-188,,,Cleveland Browns
+2016,AFC,AFC North,PIT,11,5,0,0.6875,1,399,327,72,3.0,LostCC,Pittsburgh Steelers
+2016,AFC,AFC South,HOU,9,7,0,0.5625,1,279,328,-49,4.0,LostDV,Houston Texans
+2016,AFC,AFC South,IND,8,8,0,0.5,3,411,392,19,,,Indianapolis Colts
+2016,AFC,AFC South,JAX,3,13,0,0.1875,4,318,400,-82,,,Jacksonville Jaguars
+2016,AFC,AFC South,TEN,9,7,0,0.5625,2,381,378,3,,,Tennessee Titans
+2016,AFC,AFC West,DEN,9,7,0,0.5625,3,333,297,36,,,Denver Broncos
+2016,AFC,AFC West,KC,12,4,0,0.75,1,389,311,78,2.0,LostDV,Kansas City Chiefs
+2016,AFC,AFC West,LV,12,4,0,0.75,2,416,385,31,5.0,LostWC,Las Vegas Raiders
+2016,AFC,AFC West,LAC,5,11,0,0.3125,4,410,423,-13,,,Los Angeles Chargers
+2016,NFC,NFC East,DAL,13,3,0,0.8125,1,421,306,115,1.0,LostDV,Dallas Cowboys
+2016,NFC,NFC East,NYG,11,5,0,0.6875,2,310,284,26,5.0,LostWC,New York Giants
+2016,NFC,NFC East,PHI,7,9,0,0.4375,4,367,331,36,,,Philadelphia Eagles
+2016,NFC,NFC East,WAS,8,7,1,0.53125,3,396,383,13,,,Washington Commanders
+2016,NFC,NFC North,CHI,3,13,0,0.1875,4,279,399,-120,,,Chicago Bears
+2016,NFC,NFC North,DET,9,7,0,0.5625,2,346,358,-12,6.0,LostWC,Detroit Lions
+2016,NFC,NFC North,GB,10,6,0,0.625,1,432,388,44,4.0,LostCC,Green Bay Packers
+2016,NFC,NFC North,MIN,8,8,0,0.5,3,327,307,20,,,Minnesota Vikings
+2016,NFC,NFC South,ATL,11,5,0,0.6875,1,540,406,134,2.0,LostSB,Atlanta Falcons
+2016,NFC,NFC South,CAR,6,10,0,0.375,4,369,402,-33,,,Carolina Panthers
+2016,NFC,NFC South,NO,7,9,0,0.4375,3,469,454,15,,,New Orleans Saints
+2016,NFC,NFC South,TB,9,7,0,0.5625,2,354,369,-15,,,Tampa Bay Buccaneers
+2016,NFC,NFC West,ARI,7,8,1,0.46875,2,418,362,56,,,Arizona Cardinals
+2016,NFC,NFC West,LA,4,12,0,0.25,3,224,394,-170,,,Los Angeles Rams
+2016,NFC,NFC West,SEA,10,5,1,0.65625,1,354,292,62,3.0,LostDV,Seattle Seahawks
+2016,NFC,NFC West,SF,2,14,0,0.125,4,309,480,-171,,,San Francisco 49ers
+2017,AFC,AFC East,BUF,9,7,0,0.5625,2,302,359,-57,6.0,LostWC,Buffalo Bills
+2017,AFC,AFC East,MIA,6,10,0,0.375,3,281,393,-112,,,Miami Dolphins
+2017,AFC,AFC East,NE,13,3,0,0.8125,1,458,296,162,1.0,LostSB,New England Patriots
+2017,AFC,AFC East,NYJ,5,11,0,0.3125,4,298,382,-84,,,New York Jets
+2017,AFC,AFC North,BAL,9,7,0,0.5625,2,395,303,92,,,Baltimore Ravens
+2017,AFC,AFC North,CIN,7,9,0,0.4375,3,290,349,-59,,,Cincinnati Bengals
+2017,AFC,AFC North,CLE,0,16,0,0.0,4,234,410,-176,,,Cleveland Browns
+2017,AFC,AFC North,PIT,13,3,0,0.8125,1,406,308,98,2.0,LostDV,Pittsburgh Steelers
+2017,AFC,AFC South,HOU,4,12,0,0.25,4,338,436,-98,,,Houston Texans
+2017,AFC,AFC South,IND,4,12,0,0.25,3,263,404,-141,,,Indianapolis Colts
+2017,AFC,AFC South,JAX,10,6,0,0.625,1,417,268,149,3.0,LostCC,Jacksonville Jaguars
+2017,AFC,AFC South,TEN,9,7,0,0.5625,2,334,356,-22,5.0,LostDV,Tennessee Titans
+2017,AFC,AFC West,DEN,5,11,0,0.3125,4,289,382,-93,,,Denver Broncos
+2017,AFC,AFC West,KC,10,6,0,0.625,1,415,339,76,4.0,LostWC,Kansas City Chiefs
+2017,AFC,AFC West,LAC,9,7,0,0.5625,2,355,272,83,,,Los Angeles Chargers
+2017,AFC,AFC West,LV,6,10,0,0.375,3,301,373,-72,,,Las Vegas Raiders
+2017,NFC,NFC East,DAL,9,7,0,0.5625,2,354,332,22,,,Dallas Cowboys
+2017,NFC,NFC East,NYG,3,13,0,0.1875,4,246,388,-142,,,New York Giants
+2017,NFC,NFC East,PHI,13,3,0,0.8125,1,457,295,162,1.0,WonSB,Philadelphia Eagles
+2017,NFC,NFC East,WAS,7,9,0,0.4375,3,342,388,-46,,,Washington Commanders
+2017,NFC,NFC North,CHI,5,11,0,0.3125,4,264,320,-56,,,Chicago Bears
+2017,NFC,NFC North,DET,9,7,0,0.5625,2,410,376,34,,,Detroit Lions
+2017,NFC,NFC North,GB,7,9,0,0.4375,3,320,384,-64,,,Green Bay Packers
+2017,NFC,NFC North,MIN,13,3,0,0.8125,1,382,252,130,2.0,LostCC,Minnesota Vikings
+2017,NFC,NFC South,ATL,10,6,0,0.625,3,353,315,38,6.0,LostDV,Atlanta Falcons
+2017,NFC,NFC South,CAR,11,5,0,0.6875,2,363,327,36,5.0,LostWC,Carolina Panthers
+2017,NFC,NFC South,NO,11,5,0,0.6875,1,448,326,122,4.0,LostDV,New Orleans Saints
+2017,NFC,NFC South,TB,5,11,0,0.3125,4,335,382,-47,,,Tampa Bay Buccaneers
+2017,NFC,NFC West,ARI,8,8,0,0.5,3,295,361,-66,,,Arizona Cardinals
+2017,NFC,NFC West,LA,11,5,0,0.6875,1,478,329,149,3.0,LostWC,Los Angeles Rams
+2017,NFC,NFC West,SEA,9,7,0,0.5625,2,366,332,34,,,Seattle Seahawks
+2017,NFC,NFC West,SF,6,10,0,0.375,4,331,383,-52,,,San Francisco 49ers
+2018,AFC,AFC East,BUF,6,10,0,0.375,3,269,374,-105,,,Buffalo Bills
+2018,AFC,AFC East,MIA,7,9,0,0.4375,2,319,433,-114,,,Miami Dolphins
+2018,AFC,AFC East,NE,11,5,0,0.6875,1,436,325,111,2.0,WonSB,New England Patriots
+2018,AFC,AFC East,NYJ,4,12,0,0.25,4,333,441,-108,,,New York Jets
+2018,AFC,AFC North,BAL,10,6,0,0.625,1,389,287,102,4.0,LostWC,Baltimore Ravens
+2018,AFC,AFC North,CIN,6,10,0,0.375,4,368,455,-87,,,Cincinnati Bengals
+2018,AFC,AFC North,CLE,7,8,1,0.46875,3,359,392,-33,,,Cleveland Browns
+2018,AFC,AFC North,PIT,9,6,1,0.59375,2,428,360,68,,,Pittsburgh Steelers
+2018,AFC,AFC South,HOU,11,5,0,0.6875,1,402,316,86,3.0,LostWC,Houston Texans
+2018,AFC,AFC South,IND,10,6,0,0.625,2,433,344,89,6.0,LostDV,Indianapolis Colts
+2018,AFC,AFC South,JAX,5,11,0,0.3125,4,245,316,-71,,,Jacksonville Jaguars
+2018,AFC,AFC South,TEN,9,7,0,0.5625,3,310,303,7,,,Tennessee Titans
+2018,AFC,AFC West,DEN,6,10,0,0.375,3,329,349,-20,,,Denver Broncos
+2018,AFC,AFC West,KC,12,4,0,0.75,1,565,421,144,1.0,LostCC,Kansas City Chiefs
+2018,AFC,AFC West,LAC,12,4,0,0.75,2,428,329,99,5.0,LostDV,Los Angeles Chargers
+2018,AFC,AFC West,LV,4,12,0,0.25,4,290,467,-177,,,Las Vegas Raiders
+2018,NFC,NFC East,DAL,10,6,0,0.625,1,339,324,15,4.0,LostDV,Dallas Cowboys
+2018,NFC,NFC East,NYG,5,11,0,0.3125,4,369,412,-43,,,New York Giants
+2018,NFC,NFC East,PHI,9,7,0,0.5625,2,367,348,19,6.0,LostDV,Philadelphia Eagles
+2018,NFC,NFC East,WAS,7,9,0,0.4375,3,281,359,-78,,,Washington Commanders
+2018,NFC,NFC North,CHI,12,4,0,0.75,1,421,283,138,3.0,LostWC,Chicago Bears
+2018,NFC,NFC North,DET,6,10,0,0.375,4,324,360,-36,,,Detroit Lions
+2018,NFC,NFC North,GB,6,9,1,0.40625,3,376,400,-24,,,Green Bay Packers
+2018,NFC,NFC North,MIN,8,7,1,0.53125,2,360,341,19,,,Minnesota Vikings
+2018,NFC,NFC South,ATL,7,9,0,0.4375,2,414,423,-9,,,Atlanta Falcons
+2018,NFC,NFC South,CAR,7,9,0,0.4375,3,376,382,-6,,,Carolina Panthers
+2018,NFC,NFC South,NO,13,3,0,0.8125,1,504,353,151,1.0,LostCC,New Orleans Saints
+2018,NFC,NFC South,TB,5,11,0,0.3125,4,396,464,-68,,,Tampa Bay Buccaneers
+2018,NFC,NFC West,ARI,3,13,0,0.1875,4,225,425,-200,,,Arizona Cardinals
+2018,NFC,NFC West,LA,13,3,0,0.8125,1,527,384,143,2.0,LostSB,Los Angeles Rams
+2018,NFC,NFC West,SEA,10,6,0,0.625,2,428,347,81,5.0,LostWC,Seattle Seahawks
+2018,NFC,NFC West,SF,4,12,0,0.25,3,342,435,-93,,,San Francisco 49ers
+2019,AFC,AFC East,BUF,10,6,0,0.625,2,314,259,55,5.0,LostWC,Buffalo Bills
+2019,AFC,AFC East,MIA,5,11,0,0.3125,4,306,494,-188,,,Miami Dolphins
+2019,AFC,AFC East,NE,12,4,0,0.75,1,420,225,195,3.0,LostWC,New England Patriots
+2019,AFC,AFC East,NYJ,7,9,0,0.4375,3,276,359,-83,,,New York Jets
+2019,AFC,AFC North,BAL,14,2,0,0.875,1,531,282,249,1.0,LostDV,Baltimore Ravens
+2019,AFC,AFC North,CIN,2,14,0,0.125,4,279,420,-141,,,Cincinnati Bengals
+2019,AFC,AFC North,CLE,6,10,0,0.375,3,335,393,-58,,,Cleveland Browns
+2019,AFC,AFC North,PIT,8,8,0,0.5,2,289,303,-14,,,Pittsburgh Steelers
+2019,AFC,AFC South,HOU,10,6,0,0.625,1,378,385,-7,4.0,LostDV,Houston Texans
+2019,AFC,AFC South,IND,7,9,0,0.4375,3,361,373,-12,,,Indianapolis Colts
+2019,AFC,AFC South,JAX,6,10,0,0.375,4,300,397,-97,,,Jacksonville Jaguars
+2019,AFC,AFC South,TEN,9,7,0,0.5625,2,402,331,71,6.0,LostCC,Tennessee Titans
+2019,AFC,AFC West,DEN,7,9,0,0.4375,2,282,316,-34,,,Denver Broncos
+2019,AFC,AFC West,KC,12,4,0,0.75,1,451,308,143,2.0,WonSB,Kansas City Chiefs
+2019,AFC,AFC West,LAC,5,11,0,0.3125,4,337,345,-8,,,Los Angeles Chargers
+2019,AFC,AFC West,LV,7,9,0,0.4375,3,313,419,-106,,,Las Vegas Raiders
+2019,NFC,NFC East,DAL,8,8,0,0.5,2,434,321,113,,,Dallas Cowboys
+2019,NFC,NFC East,NYG,4,12,0,0.25,3,341,451,-110,,,New York Giants
+2019,NFC,NFC East,PHI,9,7,0,0.5625,1,385,354,31,4.0,LostWC,Philadelphia Eagles
+2019,NFC,NFC East,WAS,3,13,0,0.1875,4,266,435,-169,,,Washington Commanders
+2019,NFC,NFC North,CHI,8,8,0,0.5,3,280,298,-18,,,Chicago Bears
+2019,NFC,NFC North,DET,3,12,1,0.21875,4,341,423,-82,,,Detroit Lions
+2019,NFC,NFC North,GB,13,3,0,0.8125,1,376,313,63,2.0,LostCC,Green Bay Packers
+2019,NFC,NFC North,MIN,10,6,0,0.625,2,407,303,104,6.0,LostDV,Minnesota Vikings
+2019,NFC,NFC South,ATL,7,9,0,0.4375,2,381,399,-18,,,Atlanta Falcons
+2019,NFC,NFC South,CAR,5,11,0,0.3125,4,340,470,-130,,,Carolina Panthers
+2019,NFC,NFC South,NO,13,3,0,0.8125,1,458,341,117,3.0,LostWC,New Orleans Saints
+2019,NFC,NFC South,TB,7,9,0,0.4375,3,458,449,9,,,Tampa Bay Buccaneers
+2019,NFC,NFC West,ARI,5,10,1,0.34375,4,361,442,-81,,,Arizona Cardinals
+2019,NFC,NFC West,LA,9,7,0,0.5625,3,394,364,30,,,Los Angeles Rams
+2019,NFC,NFC West,SEA,11,5,0,0.6875,2,405,398,7,5.0,LostDV,Seattle Seahawks
+2019,NFC,NFC West,SF,13,3,0,0.8125,1,479,310,169,1.0,LostSB,San Francisco 49ers
+2020,AFC,AFC East,BUF,13,3,0,0.8125,1,501,375,126,2.0,LostCC,Buffalo Bills
+2020,AFC,AFC East,MIA,10,6,0,0.625,2,404,338,66,,,Miami Dolphins
+2020,AFC,AFC East,NE,7,9,0,0.4375,3,326,353,-27,,,New England Patriots
+2020,AFC,AFC East,NYJ,2,14,0,0.125,4,243,457,-214,,,New York Jets
+2020,AFC,AFC North,BAL,11,5,0,0.6875,2,468,303,165,5.0,LostDV,Baltimore Ravens
+2020,AFC,AFC North,CIN,4,11,1,0.28125,4,311,424,-113,,,Cincinnati Bengals
+2020,AFC,AFC North,CLE,11,5,0,0.6875,3,408,419,-11,6.0,LostDV,Cleveland Browns
+2020,AFC,AFC North,PIT,12,4,0,0.75,1,416,312,104,3.0,LostWC,Pittsburgh Steelers
+2020,AFC,AFC South,HOU,4,12,0,0.25,3,384,464,-80,,,Houston Texans
+2020,AFC,AFC South,IND,11,5,0,0.6875,2,451,362,89,7.0,LostWC,Indianapolis Colts
+2020,AFC,AFC South,JAX,1,15,0,0.0625,4,306,492,-186,,,Jacksonville Jaguars
+2020,AFC,AFC South,TEN,11,5,0,0.6875,1,491,439,52,4.0,LostWC,Tennessee Titans
+2020,AFC,AFC West,DEN,5,11,0,0.3125,4,323,446,-123,,,Denver Broncos
+2020,AFC,AFC West,KC,14,2,0,0.875,1,473,362,111,1.0,LostSB,Kansas City Chiefs
+2020,AFC,AFC West,LAC,7,9,0,0.4375,3,384,426,-42,,,Los Angeles Chargers
+2020,AFC,AFC West,LV,8,8,0,0.5,2,434,478,-44,,,Las Vegas Raiders
+2020,NFC,NFC East,DAL,6,10,0,0.375,3,395,473,-78,,,Dallas Cowboys
+2020,NFC,NFC East,NYG,6,10,0,0.375,2,280,357,-77,,,New York Giants
+2020,NFC,NFC East,PHI,4,11,1,0.28125,4,334,418,-84,,,Philadelphia Eagles
+2020,NFC,NFC East,WAS,7,9,0,0.4375,1,335,329,6,4.0,LostWC,Washington Commanders
+2020,NFC,NFC North,CHI,8,8,0,0.5,2,372,370,2,7.0,LostWC,Chicago Bears
+2020,NFC,NFC North,DET,5,11,0,0.3125,4,377,519,-142,,,Detroit Lions
+2020,NFC,NFC North,GB,13,3,0,0.8125,1,509,369,140,1.0,LostCC,Green Bay Packers
+2020,NFC,NFC North,MIN,7,9,0,0.4375,3,430,475,-45,,,Minnesota Vikings
+2020,NFC,NFC South,ATL,4,12,0,0.25,4,396,414,-18,,,Atlanta Falcons
+2020,NFC,NFC South,CAR,5,11,0,0.3125,3,350,402,-52,,,Carolina Panthers
+2020,NFC,NFC South,NO,12,4,0,0.75,1,482,337,145,2.0,LostDV,New Orleans Saints
+2020,NFC,NFC South,TB,11,5,0,0.6875,2,492,355,137,5.0,WonSB,Tampa Bay Buccaneers
+2020,NFC,NFC West,ARI,8,8,0,0.5,3,410,367,43,,,Arizona Cardinals
+2020,NFC,NFC West,LA,10,6,0,0.625,2,372,296,76,6.0,LostDV,Los Angeles Rams
+2020,NFC,NFC West,SEA,12,4,0,0.75,1,459,371,88,3.0,LostWC,Seattle Seahawks
+2020,NFC,NFC West,SF,6,10,0,0.375,4,376,390,-14,,,San Francisco 49ers
+2021,AFC,AFC East,BUF,11,6,0,0.647059,1,483,289,194,3.0,LostDV,Buffalo Bills
+2021,AFC,AFC East,MIA,9,8,0,0.529412,3,341,373,-32,,,Miami Dolphins
+2021,AFC,AFC East,NE,10,7,0,0.588235,2,462,303,159,6.0,LostWC,New England Patriots
+2021,AFC,AFC East,NYJ,4,13,0,0.235294,4,310,504,-194,,,New York Jets
+2021,AFC,AFC North,BAL,8,9,0,0.470588,4,387,392,-5,,,Baltimore Ravens
+2021,AFC,AFC North,CIN,10,7,0,0.588235,1,460,376,84,4.0,LostSB,Cincinnati Bengals
+2021,AFC,AFC North,CLE,8,9,0,0.470588,3,349,371,-22,,,Cleveland Browns
+2021,AFC,AFC North,PIT,9,7,1,0.558824,2,343,398,-55,7.0,LostWC,Pittsburgh Steelers
+2021,AFC,AFC South,HOU,4,13,0,0.235294,3,280,452,-172,,,Houston Texans
+2021,AFC,AFC South,IND,9,8,0,0.529412,2,451,365,86,,,Indianapolis Colts
+2021,AFC,AFC South,JAX,3,14,0,0.176471,4,253,457,-204,,,Jacksonville Jaguars
+2021,AFC,AFC South,TEN,12,5,0,0.705882,1,419,354,65,1.0,LostDV,Tennessee Titans
+2021,AFC,AFC West,DEN,7,10,0,0.411765,4,335,322,13,,,Denver Broncos
+2021,AFC,AFC West,KC,12,5,0,0.705882,1,480,364,116,2.0,LostCC,Kansas City Chiefs
+2021,AFC,AFC West,LAC,9,8,0,0.529412,3,474,459,15,,,Los Angeles Chargers
+2021,AFC,AFC West,LV,10,7,0,0.588235,2,374,439,-65,5.0,LostWC,Las Vegas Raiders
+2021,NFC,NFC East,DAL,12,5,0,0.705882,1,530,358,172,3.0,LostWC,Dallas Cowboys
+2021,NFC,NFC East,NYG,4,13,0,0.235294,4,258,416,-158,,,New York Giants
+2021,NFC,NFC East,PHI,9,8,0,0.529412,2,444,385,59,7.0,LostWC,Philadelphia Eagles
+2021,NFC,NFC East,WAS,7,10,0,0.411765,3,335,434,-99,,,Washington Commanders
+2021,NFC,NFC North,CHI,6,11,0,0.352941,3,311,407,-96,,,Chicago Bears
+2021,NFC,NFC North,DET,3,13,1,0.205882,4,325,467,-142,,,Detroit Lions
+2021,NFC,NFC North,GB,13,4,0,0.764706,1,450,371,79,1.0,LostDV,Green Bay Packers
+2021,NFC,NFC North,MIN,8,9,0,0.470588,2,425,426,-1,,,Minnesota Vikings
+2021,NFC,NFC South,ATL,7,10,0,0.411765,3,313,459,-146,,,Atlanta Falcons
+2021,NFC,NFC South,CAR,5,12,0,0.294118,4,304,404,-100,,,Carolina Panthers
+2021,NFC,NFC South,NO,9,8,0,0.529412,2,364,335,29,,,New Orleans Saints
+2021,NFC,NFC South,TB,13,4,0,0.764706,1,511,353,158,2.0,LostDV,Tampa Bay Buccaneers
+2021,NFC,NFC West,ARI,11,6,0,0.647059,2,449,366,83,5.0,LostWC,Arizona Cardinals
+2021,NFC,NFC West,LA,12,5,0,0.705882,1,460,372,88,4.0,WonSB,Los Angeles Rams
+2021,NFC,NFC West,SEA,7,10,0,0.411765,4,395,366,29,,,Seattle Seahawks
+2021,NFC,NFC West,SF,10,7,0,0.588235,3,427,365,62,6.0,LostCC,San Francisco 49ers
+2022,AFC,AFC East,BUF,13,3,0,0.8125,1,455,286,169,2.0,LostDV,Buffalo Bills
+2022,AFC,AFC East,MIA,9,8,0,0.529412,2,397,399,-2,7.0,LostWC,Miami Dolphins
+2022,AFC,AFC East,NE,8,9,0,0.470588,3,364,347,17,,,New England Patriots
+2022,AFC,AFC East,NYJ,7,10,0,0.411765,4,296,316,-20,,,New York Jets
+2022,AFC,AFC North,BAL,10,7,0,0.588235,2,350,315,35,6.0,LostWC,Baltimore Ravens
+2022,AFC,AFC North,CIN,12,4,0,0.75,1,418,322,96,3.0,LostCC,Cincinnati Bengals
+2022,AFC,AFC North,CLE,7,10,0,0.411765,4,361,381,-20,,,Cleveland Browns
+2022,AFC,AFC North,PIT,9,8,0,0.529412,3,308,346,-38,,,Pittsburgh Steelers
+2022,AFC,AFC South,HOU,3,13,1,0.205882,4,289,420,-131,,,Houston Texans
+2022,AFC,AFC South,IND,4,12,1,0.264706,3,289,427,-138,,,Indianapolis Colts
+2022,AFC,AFC South,JAX,9,8,0,0.529412,1,404,350,54,4.0,LostDV,Jacksonville Jaguars
+2022,AFC,AFC South,TEN,7,10,0,0.411765,2,298,359,-61,,,Tennessee Titans
+2022,AFC,AFC West,DEN,5,12,0,0.294118,4,287,359,-72,,,Denver Broncos
+2022,AFC,AFC West,KC,14,3,0,0.823529,1,496,369,127,1.0,WonSB,Kansas City Chiefs
+2022,AFC,AFC West,LAC,10,7,0,0.588235,2,391,384,7,5.0,LostWC,Los Angeles Chargers
+2022,AFC,AFC West,LV,6,11,0,0.352941,3,395,418,-23,,,Las Vegas Raiders
+2022,NFC,NFC East,DAL,12,5,0,0.705882,2,467,342,125,5.0,LostDV,Dallas Cowboys
+2022,NFC,NFC East,NYG,9,7,1,0.558824,3,365,371,-6,6.0,LostDV,New York Giants
+2022,NFC,NFC East,PHI,14,3,0,0.823529,1,477,344,133,1.0,LostSB,Philadelphia Eagles
+2022,NFC,NFC East,WAS,8,8,1,0.5,4,321,343,-22,,,Washington Commanders
+2022,NFC,NFC North,CHI,3,14,0,0.176471,4,326,463,-137,,,Chicago Bears
+2022,NFC,NFC North,DET,9,8,0,0.529412,2,453,427,26,,,Detroit Lions
+2022,NFC,NFC North,GB,8,9,0,0.470588,3,370,371,-1,,,Green Bay Packers
+2022,NFC,NFC North,MIN,13,4,0,0.764706,1,424,427,-3,3.0,LostWC,Minnesota Vikings
+2022,NFC,NFC South,ATL,7,10,0,0.411765,4,365,386,-21,,,Atlanta Falcons
+2022,NFC,NFC South,CAR,7,10,0,0.411765,2,347,374,-27,,,Carolina Panthers
+2022,NFC,NFC South,NO,7,10,0,0.411765,3,330,345,-15,,,New Orleans Saints
+2022,NFC,NFC South,TB,8,9,0,0.470588,1,313,358,-45,4.0,LostWC,Tampa Bay Buccaneers
+2022,NFC,NFC West,ARI,4,13,0,0.235294,4,340,449,-109,,,Arizona Cardinals
+2022,NFC,NFC West,LA,5,12,0,0.294118,3,307,384,-77,,,Los Angeles Rams
+2022,NFC,NFC West,SEA,9,8,0,0.529412,2,407,401,6,7.0,LostWC,Seattle Seahawks
+2022,NFC,NFC West,SF,13,4,0,0.764706,1,450,277,173,2.0,LostCC,San Francisco 49ers
+2023,AFC,AFC East,BUF,11,6,0,0.647059,1,451,311,140,2.0,LostDV,Buffalo Bills
+2023,AFC,AFC East,MIA,11,6,0,0.647059,2,496,391,105,6.0,LostWC,Miami Dolphins
+2023,AFC,AFC East,NE,4,13,0,0.235294,4,236,366,-130,,,New England Patriots
+2023,AFC,AFC East,NYJ,7,10,0,0.411765,3,268,355,-87,,,New York Jets
+2023,AFC,AFC North,BAL,13,4,0,0.764706,1,483,280,203,1.0,LostCC,Baltimore Ravens
+2023,AFC,AFC North,CIN,9,8,0,0.529412,4,366,384,-18,,,Cincinnati Bengals
+2023,AFC,AFC North,CLE,11,6,0,0.647059,2,396,362,34,5.0,LostWC,Cleveland Browns
+2023,AFC,AFC North,PIT,10,7,0,0.588235,3,304,324,-20,7.0,LostWC,Pittsburgh Steelers
+2023,AFC,AFC South,HOU,10,7,0,0.588235,1,377,353,24,4.0,LostDV,Houston Texans
+2023,AFC,AFC South,IND,9,8,0,0.529412,3,396,415,-19,,,Indianapolis Colts
+2023,AFC,AFC South,JAX,9,8,0,0.529412,2,377,371,6,,,Jacksonville Jaguars
+2023,AFC,AFC South,TEN,6,11,0,0.352941,4,305,367,-62,,,Tennessee Titans
+2023,AFC,AFC West,DEN,8,9,0,0.470588,3,357,413,-56,,,Denver Broncos
+2023,AFC,AFC West,KC,11,6,0,0.647059,1,371,294,77,3.0,,Kansas City Chiefs
+2023,AFC,AFC West,LAC,5,12,0,0.294118,4,346,398,-52,,,Los Angeles Chargers
+2023,AFC,AFC West,LV,8,9,0,0.470588,2,332,331,1,,,Las Vegas Raiders
+2023,NFC,NFC East,DAL,12,5,0,0.705882,1,509,315,194,2.0,LostWC,Dallas Cowboys
+2023,NFC,NFC East,NYG,6,11,0,0.352941,3,266,407,-141,,,New York Giants
+2023,NFC,NFC East,PHI,11,6,0,0.647059,2,433,428,5,5.0,LostWC,Philadelphia Eagles
+2023,NFC,NFC East,WAS,4,13,0,0.235294,4,329,518,-189,,,Washington Commanders
+2023,NFC,NFC North,CHI,7,10,0,0.411765,4,360,379,-19,,,Chicago Bears
+2023,NFC,NFC North,DET,12,5,0,0.705882,1,461,395,66,3.0,LostCC,Detroit Lions
+2023,NFC,NFC North,GB,9,8,0,0.529412,2,383,350,33,7.0,LostDV,Green Bay Packers
+2023,NFC,NFC North,MIN,7,10,0,0.411765,3,344,362,-18,,,Minnesota Vikings
+2023,NFC,NFC South,ATL,7,10,0,0.411765,3,321,373,-52,,,Atlanta Falcons
+2023,NFC,NFC South,CAR,2,15,0,0.117647,4,236,416,-180,,,Carolina Panthers
+2023,NFC,NFC South,NO,9,8,0,0.529412,2,402,327,75,,,New Orleans Saints
+2023,NFC,NFC South,TB,9,8,0,0.529412,1,348,325,23,4.0,LostDV,Tampa Bay Buccaneers
+2023,NFC,NFC West,ARI,4,13,0,0.235294,4,330,455,-125,,,Arizona Cardinals
+2023,NFC,NFC West,LA,10,7,0,0.588235,2,404,377,27,6.0,LostWC,Los Angeles Rams
+2023,NFC,NFC West,SEA,9,8,0,0.529412,3,364,402,-38,,,Seattle Seahawks
+2023,NFC,NFC West,SF,12,5,0,0.705882,1,491,298,193,1.0,,San Francisco 49ers
