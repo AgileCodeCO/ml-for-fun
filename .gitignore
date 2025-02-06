@@ -169,3 +169,6 @@ resource_credentials.py
 mlruns/
 
 kaggle.json
+
+bin/
+obj/
