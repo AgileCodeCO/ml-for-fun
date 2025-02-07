@@ -1,8 +1,8 @@
 ﻿using Microsoft.SemanticKernel;
 
 var modelId = "gpt-35-turbo-16k";
-var endpoint = "https://rag-research.openai.azure.com/";  
-var apiKey = "080ddc88dc5344b78604b8d5d5f0389b";
+var endpoint = "[endpoint]";  
+var apiKey = "[api-key]";
 
 var builder = Kernel.CreateBuilder();
 builder.AddAzureOpenAIChatCompletion(modelId, endpoint, apiKey);
