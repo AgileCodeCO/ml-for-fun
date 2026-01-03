@@ -172,3 +172,5 @@ kaggle.json
 
 bin/
 obj/
+
+.idea/

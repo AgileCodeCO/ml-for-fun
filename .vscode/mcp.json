@@ -1,0 +1,14 @@
+{
+	"servers": {
+		"mcp-echo-server": {
+			"type": "stdio",
+			"command": "dotnet",
+			"args": [
+				"run",
+				"--project",
+				"/Users/agilecode/Repos/ml-for-fun/mcp/server/AgileCode.AI.ForFun.MCP.Server/AgileCode.AI.ForFun.MCP.ConsoleServer/AgileCode.AI.ForFun.MCP.ConsoleServer.csproj"
+			]
+		}
+	},
+	"inputs": []
+}

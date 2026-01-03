@@ -1,0 +1,6 @@
+@AgileCode.AI.ForFun.MCP.Server_HostAddress = http://localhost:5036
+
+GET {{AgileCode.AI.ForFun.MCP.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
